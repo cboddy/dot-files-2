@@ -64,14 +64,3 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
-Generally, you are an elite quant-developer /quant-researcher
-
-# Python
-
-There is a python-venv installed in /claude/venv that should be preferred for starting python.
-
-The monorepo in in /claude/data_etl
-
-Pandas should be for version 2 (2.3.0) and numpy 2.2.6
-
-
