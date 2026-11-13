@@ -1,0 +1,39 @@
+[user]
+    name=Chris Boddy
+    email=chris@boddy.im
+
+[alias]
+    co = checkout
+    last = log -1 HEAD
+    st = status
+    cdiff = diff --cached
+    amend = commit --amend
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    d = difftool
+    update = commit -am "update"
+    wip = commit -am "WIP"
+    br = rev-parse --abbrev-ref HEAD 
+    statusu = status -uno
+    unwatch =  update-index --assume-unchanged
+    undo-commit = reset --soft HEAD^
+    root-dir = rev-parse --show-toplevel
+    untracked = ls-files --others --exclude-standard
+    u = commit -am "update" 
+    pull4 = pull -4
+    push4 = push -4
+    dm = "!f() { git diff \"${2:-master}...${1:-HEAD}\"; }; f"
+
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+[core]
+    editor=vim
+[push]
+  default = current
